@@ -1,8 +1,9 @@
 import React from 'react';
-import logo from '../static/logo.svg';
+import logo from '../../static/logo.svg';
 import './App.css';
 
-export const App = () => (
+// eslint-disable-next-line react/prop-types
+export const App = ({ start }) => (
   <div className="App">
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
@@ -18,6 +19,8 @@ export const App = () => (
       >
         Learn React
       </a>
+      {/* eslint-disable-next-line react/button-has-type */}
+      <button onClick={start}>Start</button>
     </header>
   </div>
 );
