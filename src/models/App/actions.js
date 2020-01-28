@@ -1,6 +1,6 @@
 import { createNormalActions } from '../utils';
-import { START } from './actionTypes';
+import { PRESS_BUTTON, BUTTON_PRESSED } from './actionTypes';
 
-const ACTIONS = [START];
+const ACTIONS = [PRESS_BUTTON, BUTTON_PRESSED];
 
-export const { start } = createNormalActions(ACTIONS);
+export const { pressButton, buttonPressed } = createNormalActions(ACTIONS);

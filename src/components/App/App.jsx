@@ -3,7 +3,7 @@ import logo from '../../static/logo.svg';
 import './App.css';
 
 // eslint-disable-next-line react/prop-types
-export const App = ({ start }) => (
+export const App = ({ press }) => (
   <div className="App">
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
@@ -20,7 +20,7 @@ export const App = ({ start }) => (
         Learn React
       </a>
       {/* eslint-disable-next-line react/button-has-type */}
-      <button onClick={start}>Start</button>
+      <button onClick={() => press()}>Start</button>
     </header>
   </div>
 );

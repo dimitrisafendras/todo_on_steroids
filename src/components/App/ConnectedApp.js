@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { start } from '../../models/App/actions';
+import { pressButton } from '../../models/App/actions';
 import { App } from './App';
 
 const mapStateToProps = ({ state }) => ({
@@ -8,7 +8,7 @@ const mapStateToProps = ({ state }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  start: bindActionCreators(start, dispatch),
+  press: bindActionCreators(pressButton, dispatch),
 });
 
 export const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App);
