@@ -1,4 +1,5 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
 import logo from '../static/logo.svg';
 import { useStyles } from './styles';
 
@@ -7,6 +8,8 @@ export const App = ({ press }) => {
   const { app, appLogo, appHeader, appLink } = useStyles();
   return (
     <div className={app}>
+      <Typography variant="h1">Title</Typography>
+      <Typography variant="h2">SubTitle</Typography>
       <header className={appHeader}>
         <img src={logo} className={appLogo} alt="logo" />
         <p>

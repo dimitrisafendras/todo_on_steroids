@@ -1,17 +1,19 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import { merge } from 'lodash-es';
 import { typography } from './typography';
 import { palette } from './palette';
 import { color } from './color';
 
-export const muiTheme = createMuiTheme({
-  typography: {
-    useNextVariants: true,
-    fontFamily: typography.fontFamily,
-  },
-  palette,
-  color,
-});
+export const muiTheme = responsiveFontSizes(
+  createMuiTheme({
+    typography: {
+      useNextVariants: true,
+      fontFamily: typography.fontFamily,
+    },
+    palette,
+    color,
+  }),
+);
 
 let {
   // eslint-disable-next-line no-unused-vars
