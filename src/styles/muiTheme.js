@@ -14,60 +14,70 @@ export const muiTheme = createMuiTheme({
   color,
 });
 
-muiTheme.typography = merge(
-  muiTheme.typography,
-  typography(muiTheme.typography),
-);
+let {
+  // eslint-disable-next-line no-unused-vars
+  overrides,
+  // eslint-disable-next-line prefer-const
+  palette: muiPalette,
+  typography: muiTypography,
+  // eslint-disable-next-line prefer-const
+  breakpoints,
+} = muiTheme;
+const { pxToRem } = muiTypography;
+const { down } = breakpoints;
+const { primary, secondary } = muiPalette;
+
+muiTypography = merge(muiTypography, typography(muiTypography));
 
 // Overrides
-muiTheme.overrides = {
+overrides = {
   MuiTypography: {
     colorInherit: {
       color: 'inherit',
     },
     colorSecondary: {
-      color: muiTheme.palette.secondary.main,
+      color: secondary.main,
     },
     colorPrimary: {
-      color: muiTheme.palette.primary.main,
+      color: primary.main,
     },
     h1: {
-      [muiTheme.breakpoints.down('sm')]: {
-        fontSize: muiTheme.typography.pxToRem(56),
+      [down('sm')]: {
+        fontSize: pxToRem(56),
       },
-      [muiTheme.breakpoints.down('xs')]: {
-        fontSize: muiTheme.typography.pxToRem(40),
+      [down('xs')]: {
+        fontSize: pxToRem(40),
       },
     },
     h2: {
-      [muiTheme.breakpoints.down('sm')]: {
-        fontSize: muiTheme.typography.pxToRem(48),
+      [down('sm')]: {
+        fontSize: pxToRem(48),
       },
-      [muiTheme.breakpoints.down('xs')]: {
-        fontSize: muiTheme.typography.pxToRem(32),
+      [down('xs')]: {
+        fontSize: pxToRem(32),
       },
     },
     h3: {
-      [muiTheme.breakpoints.down('sm')]: {
-        fontSize: muiTheme.typography.pxToRem(21),
+      [down('sm')]: {
+        fontSize: pxToRem(21),
       },
-      [muiTheme.breakpoints.down('xs')]: {
-        fontSize: muiTheme.typography.pxToRem(18),
+      [down('xs')]: {
+        fontSize: pxToRem(18),
       },
     },
     subtitle1: {
-      [muiTheme.breakpoints.down('sm')]: {
-        fontSize: muiTheme.typography.pxToRem(14),
+      [down('sm')]: {
+        fontSize: pxToRem(14),
       },
     },
     body1: {
-      [muiTheme.breakpoints.down('sm')]: {
-        fontSize: muiTheme.typography.pxToRem(14),
+      [down('sm')]: {
+        fontSize: pxToRem(14),
       },
     },
     body2: {
-      [muiTheme.breakpoints.down('sm')]: {
-        fontSize: muiTheme.typography.pxToRem(12),
+      [down('sm')]: {
+        fontSize: pxToRem(12),
       },
     },
   },
