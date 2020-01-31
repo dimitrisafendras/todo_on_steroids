@@ -1,4 +1,3 @@
-// TODO: Refactor
 const fade = (hex, opacity) => {
   const newHex = hex.replace('#', '');
   const r = parseInt(newHex.substring(0, 2), 16);

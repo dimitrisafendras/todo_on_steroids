@@ -1,4 +1,3 @@
-// TODO: Refactor
 import { createMuiTheme } from '@material-ui/core/styles';
 import { merge } from 'lodash-es';
 import { typography } from './typography';
