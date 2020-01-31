@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../static/logo.svg';
+import logo from '../static/logo.svg';
 import './App.css';
 
 // eslint-disable-next-line react/prop-types
