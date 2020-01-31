@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/styles';
 import { Provider } from 'react-redux';
 import { ConnectedApp } from './App';
 import { store } from './models/store';
 import * as serviceWorker from './serviceWorker';
+import { theme } from './styles';
 
 ReactDOM.render(
   <Provider store={store}>
-    <ConnectedApp />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <ConnectedApp />
+    </ThemeProvider>
   </Provider>,
   document.getElementById('root'),
 );
