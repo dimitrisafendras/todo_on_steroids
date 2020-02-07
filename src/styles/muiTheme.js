@@ -3,6 +3,7 @@ import { merge } from 'lodash-es';
 import { typography } from './typography';
 import { palette } from './palette';
 import { color } from './color';
+import { fontOverrides, overengineered } from './utils';
 
 export const muiTheme = responsiveFontSizes(
   createMuiTheme({
@@ -83,3 +84,6 @@ overrides = {
     },
   },
 };
+
+console.log('>>>', fontOverrides);
+console.log('>>>', overengineered(down)(pxToRem)(fontOverrides));
