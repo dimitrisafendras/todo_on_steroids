@@ -9,7 +9,6 @@ const mapStateToProps = ({ state }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   press: bindActionCreators(pressButton, dispatch),
-  kpress: bindActionCreators(pressButton, dispatch),
 });
 
 export const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App);
